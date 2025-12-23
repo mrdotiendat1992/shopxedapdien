@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenMotion - Xe Đạp Điện Chính Hãng</title>
+    
+    <!-- Tailwind CSS (Styling) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome (Icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .bike-card:hover {
+            transform: translateY(-5px);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #16a34a; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #15803d; 
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- HEADER -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <i class="fa-solid fa-bolt text-green-600 text-2xl"></i>
+                <span class="text-2xl font-bold text-gray-800">Green<span class="text-green-600">Motion</span></span>
+            </a>
+            
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="#home" class="hover:text-green-600 transition">Trang chủ</a>
+                <a href="#products" class="hover:text-green-600 transition">Sản phẩm</a>
+                <a href="#about" class="hover:text-green-600 transition">Về chúng tôi</a>
+                <a href="#contact" class="hover:text-green-600 transition">Liên hệ</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <button class="relative hover:text-green-600 transition">
+                    <i class="fa-solid fa-cart-shopping text-xl"></i>
+                    <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                </button>
+                <button class="md:hidden text-2xl text-gray-700">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative bg-green-50 py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+                    Di chuyển xanh <br>
+                    <span class="text-green-600">Sống an lành</span>
+                </h1>
+                <p class="text-lg text-gray-600 mb-8">
+                    Khám phá bộ sưu tập xe đạp điện hiện đại, tiết kiệm năng lượng và thân thiện với môi trường. Bảo hành chính hãng 2 năm.
+                </p>
+                <a href="#products" class="bg-green-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-green-700 transition duration-300 inline-flex items-center">
+                    Xem sản phẩm <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <!-- Placeholder Image for Hero Bike -->
+                <img src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Hero E-Bike" class="rounded-xl shadow-2xl max-w-full h-auto object-cover transform hover:scale-105 transition duration-500">
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div class="p-6 rounded-lg hover:bg-gray-50 transition">
+                <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fa-solid fa-battery-full text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Pin Siêu Bền</h3>
+                <p class="text-gray-600">Công nghệ Lithium-ion mới nhất, đi được tới 80km chỉ với một lần sạc.</p>
+            </div>
+            <div class="p-6 rounded-lg hover:bg-gray-50 transition">
+                <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fa-solid fa-gauge-high text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Tốc Độ Ổn Định</h3>
+                <p class="text-gray-600">Động cơ mạnh mẽ nhưng êm ái, đạt vận tốc tối đa 45km/h an toàn.</p>
+            </div>
+            <div class="p-6 rounded-lg hover:bg-gray-50 transition">
+                <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fa-solid fa-leaf text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Thân Thiện Môi Trường</h3>
+                <p class="text-gray-600">Không khí thải, giảm tiếng ồn, góp phần bảo vệ hành tinh xanh.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCT LIST -->
+    <section id="products" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Sản Phẩm Nổi Bật</h2>
+                <div class="w-20 h-1 bg-green-600 mx-auto"></div>
+            </div>
+
+            <!-- Grid Container for Products -->
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Products will be inserted here by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-2xl font-bold mb-4">GreenMotion</h3>
+                <p class="text-gray-400">Đồng hành cùng bạn trên mọi nẻo đường xanh.</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Liên hệ</h4>
+                <p class="text-gray-400 mb-2"><i class="fa-solid fa-location-dot mr-2"></i> 123 Đường Láng, Hà Nội</p>
+                <p class="text-gray-400 mb-2"><i class="fa-solid fa-phone mr-2"></i> 0912 345 678</p>
+                <p class="text-gray-400"><i class="fa-solid fa-envelope mr-2"></i> sale@greenmotion.vn</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Chính sách</h4>
+                <ul class="text-gray-400 space-y-2">
+                    <li><a href="#" class="hover:text-green-500">Bảo hành</a></li>
+                    <li><a href="#" class="hover:text-green-500">Đổi trả</a></li>
+                    <li><a href="#" class="hover:text-green-500">Vận chuyển</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Mạng xã hội</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-green-600 transition"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-green-600 transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-green-600 transition"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center border-t border-gray-800 mt-8 pt-8 text-gray-500">
+            &copy; 2024 GreenMotion. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- QR PAYMENT MODAL -->
+    <div id="payment-modal" class="fixed inset-0 bg-black bg-opacity-70 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full overflow-hidden animate-fade-in-up">
+            <!-- Modal Header -->
+            <div class="bg-green-600 px-6 py-4 flex justify-between items-center">
+                <h3 class="text-white text-lg font-bold"><i class="fa-solid fa-qrcode mr-2"></i> Thanh Toán QR</h3>
+                <button onclick="closeModal()" class="text-white hover:text-gray-200 transition">
+                    <i class="fa-solid fa-xmark text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="p-6">
+                <div class="text-center mb-6">
+                    <p class="text-gray-500 text-sm mb-1">Đơn hàng:</p>
+                    <h4 id="modal-product-name" class="text-xl font-bold text-gray-800">Tên Xe Ở Đây</h4>
+                    <p id="modal-product-price" class="text-2xl font-bold text-green-600 mt-2">0 ₫</p>
+                </div>
+
+                <div class="flex justify-center mb-6">
+                    <!-- Dynamic QR Code (using API for demo) -->
+                    <div class="border-4 border-green-500 rounded-lg p-2 bg-white">
+                        <img id="qr-image" src="" alt="QR Code" class="w-48 h-48 object-contain">
+                    </div>
+                </div>
+
+                <div class="bg-gray-100 p-4 rounded-lg text-sm space-y-2">
+                    <div class="flex justify-between">
+                        <span class="text-gray-600">Ngân hàng:</span>
+                        <span class="font-bold">Vietcombank</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-600">Chủ tài khoản:</span>
+                        <span class="font-bold">CONG TY GREENMOTION</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-600">Số tài khoản:</span>
+                        <span class="font-bold">1234 5678 9999</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-600">Nội dung:</span>
+                        <span class="font-bold text-red-500" id="modal-order-content">MUA XE 01</span>
+                    </div>
+                </div>
+
+                <div class="mt-6 text-center text-xs text-gray-400">
+                    Mở ứng dụng ngân hàng và quét mã QR để thanh toán nhanh.
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="bg-gray-50 px-6 py-4 flex justify-center space-x-4">
+                <button onclick="closeModal()" class="px-6 py-2 border border-gray-300 rounded-lg text-gray-600 hover:bg-gray-100 transition">
+                    Hủy bỏ
+                </button>
+                <button onclick="confirmPayment()" class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition shadow-lg">
+                    <i class="fa-solid fa-check mr-2"></i> Đã thanh toán
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // 1. DATA: Danh sách sản phẩm mẫu
+        const products = [
+            {
+                id: 1,
+                name: "E-Bike City Slim X1",
+                price: 12500000,
+                description: "Thiết kế thanh lịch, phù hợp di chuyển trong đô thị. Pin Lithium 48V.",
+                image: "https://images.unsplash.com/photo-1621235123985-e256e29712df?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                badge: "Bán chạy"
+            },
+            {
+                id: 2,
+                name: "Mountain Beast Pro",
+                price: 18900000,
+                description: "Xe đạp điện địa hình với lốp béo, giảm xóc kép, động cơ 500W mạnh mẽ.",
+                image: "https://images.unsplash.com/photo-1616963248328-647a3035411e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                badge: "Mới"
+            },
+            {
+                id: 3,
+                name: "Compact Fold Z2",
+                price: 9800000,
+                description: "Xe đạp điện gấp gọn, trọng lượng nhẹ, dễ dàng mang lên chung cư.",
+                image: "https://images.unsplash.com/photo-1656667558661-8f553f120e8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                badge: null
+            },
+            {
+                id: 4,
+                name: "Vintage Cruiser V8",
+                price: 15200000,
+                description: "Phong cách cổ điển kết hợp công nghệ hiện đại. Yên da cao cấp.",
+                image: "https://images.unsplash.com/photo-1596728329688-66258f33878b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                badge: "Cao cấp"
+            },
+            {
+                id: 5,
+                name: "Sport Racer S",
+                price: 24000000,
+                description: "Dòng xe thể thao tốc độ cao, khung carbon siêu nhẹ, phanh đĩa thủy lực.",
+                image: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                badge: null
+            },
+            {
+                id: 6,
+                name: "Cargo E-Wagon",
+                price: 14500000,
+                description: "Xe đạp điện chở hàng với giỏ xe lớn phía trước và baga chắc chắn.",
+                image: "https://images.unsplash.com/photo-1626244793666-4e5cb4c5520d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                badge: "Tiện ích"
+            }
+        ];
+
+        // Format tiền tệ VNĐ
+        const formatCurrency = (amount) => {
+            return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(amount);
+        };
+
+        // 2. RENDER: Hiển thị sản phẩm ra màn hình
+        const productGrid = document.getElementById('product-grid');
+
+        function renderProducts() {
+            productGrid.innerHTML = products.map(product => `
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden bike-card transition duration-300 flex flex-col h-full border border-gray-100">
+                    <div class="relative">
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-56 object-cover">
+                        ${product.badge ? `<span class="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-md">${product.badge}</span>` : ''}
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">${product.name}</h3>
+                        <p class="text-gray-500 text-sm mb-4 flex-grow line-clamp-2">${product.description}</p>
+                        
+                        <div class="flex items-end justify-between mt-auto pt-4 border-t border-gray-100">
+                            <div class="flex flex-col">
+                                <span class="text-xs text-gray-400">Giá bán</span>
+                                <span class="text-lg font-bold text-green-600">${formatCurrency(product.price)}</span>
+                            </div>
+                            <button onclick="openPaymentModal(${product.id})" class="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-green-600 transition duration-300 flex items-center">
+                                <i class="fa-solid fa-cart-plus mr-2"></i> Mua Ngay
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 3. LOGIC MODAL: Xử lý nút mua hàng và QR Code
+        const modal = document.getElementById('payment-modal');
+        const modalName = document.getElementById('modal-product-name');
+        const modalPrice = document.getElementById('modal-product-price');
+        const modalContent = document.getElementById('modal-order-content');
+        const qrImage = document.getElementById('qr-image');
+
+        function openPaymentModal(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+
+            // Cập nhật thông tin Modal
+            modalName.innerText = product.name;
+            modalPrice.innerText = formatCurrency(product.price);
+            
+            // Tạo nội dung chuyển khoản giả định
+            const orderContent = `MUA XE ${product.id} ${Date.now().toString().slice(-4)}`;
+            modalContent.innerText = orderContent;
+
+            // Tạo link QR Code (Sử dụng API miễn phí của qrserver để tạo ảnh QR)
+            // Trong thực tế, bạn sẽ dùng VietQR API để tạo mã ngân hàng chuẩn.
+            // Ở đây mình tạo QR chứa text để demo.
+            const qrData = `Thanh toan: ${product.name} - Gia: ${product.price} - Noi dung: ${orderContent}`;
+            const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(qrData)}&color=16a34a`;
+            
+            qrImage.src = qrUrl;
+
+            // Hiển thị Modal
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Khóa cuộn trang
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Mở cuộn trang
+        }
+
+        function confirmPayment() {
+            alert("Cảm ơn bạn! Đơn hàng đang được xử lý. Chúng tôi sẽ liên hệ sớm.");
+            closeModal();
+        }
+
+        // Đóng modal khi click ra ngoài
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Khởi chạy
+        renderProducts();
+
+    </script>
+</body>
+</html>
